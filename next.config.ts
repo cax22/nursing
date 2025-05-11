@@ -1,7 +1,15 @@
-import type { NextConfig } from "next";
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  output: "export",
+  images: {
+    unoptimized: true,
+  },
+  // Replace with your GitHub username and repository name
+  basePath: "/nursing",
+  assetPrefix: "/nursing",
 
-const nextConfig: NextConfig = {
-  /* config options here */
+  // Optional: Add trailingSlash for better GitHub Pages compatibility
+  trailingSlash: true,
 };
 
-export default nextConfig;
+module.exports = nextConfig;
